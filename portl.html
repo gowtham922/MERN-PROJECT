@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>gowthm - Admission Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Image1.jpeg" alt="Aditya University Logo">
+        </div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleMenu()">
+                    Programs ▾
+                </button>
+                <div id="programMenu" class="dropdown-content">
+                    <a href="#apply" onclick="selectCourse('B.Tech - AI & ML')">B.Tech - AI & ML</a>
+                    <a href="#apply" onclick="selectCourse('B.Tech - CSE')">B.Tech - CSE</a>
+                    <a href="#apply" onclick="selectCourse('BBA')">BBA</a>
+                    <a href="#apply" onclick="selectCourse('MBA')">MBA</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="Background.video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>WELCOME TO ADITYA UNIVERSITY</h1>
+            <p> .</p>
+            <a href="#apply" class="btn">Apply Now</a>
+        </div>
+    </section>
+    </div>
+    </section>
+    <section class="admission" id="apply"
+        style="background-image: url('Image1.jpeg'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(255, 255, 255, 0.85);">
+        <h2>Admission Form 2026</h2>
+       <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Mobile Number" required>
+            <select id="courseSelect" required>
+                <option value="">Select Course</option>
+                <option value="B.Tech - AI & ML">B.Tech - AI & ML</option>
+                <option value="B.Tech - CSE">B.Tech - CSE</option>
+                <option value="BBA">BBA</option>
+                <option value="MBA">MBA</option>
+            </select>
+            <input type="number" placeholder="10th Marks (%)" step="0.01" min="0" max="100" required>
+            <input type="number" placeholder="Inter/12th Marks (%)" step="0.01" min="0" max="100" required>
+            <input type="text" placeholder="Entrance Exam Name & Score (e.g. JEE 90%)">
+            <textarea placeholder="Why do you want to join?" rows="4"></textarea>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+    <footer>
+        © 2026 Aditya University | Admission Portal
+    </footer>
+    <script>
+        function selectCourse(course) {
+            const courseSelect = document.getElementById('courseSelect');
+            if (courseSelect) {
+                courseSelect.value = course;
+            }
+        }
+    </script>
+</body>
+
+</html>
